@@ -1,0 +1,58 @@
+// Initialize pen state and orientation
+  PenIsLowered = False
+  PenIsFacingRight = True
+
+  // Task 1: Draw a 1-inch horizontal line to the right
+  IF PenIsLowered == False THEN
+      LowerPen()  // Lower the pen to the paper
+  END IF
+  
+  MovePenRight(1)  // Move pen 1 inch to the right and draw the line
+
+  RaisePen()  // Raise the pen from the paper
+  
+  // Task 2: Turn the pen and draw a vertical line (1 inch down)
+  TurnRight90Degrees()  // Pen now faces down
+  
+  IF PenIsLowered == False THEN
+      LowerPen()  // Lower the pen again
+  END IF
+  
+  MovePenDown(1)  // Move pen 1 inch downward to draw the vertical line
+
+  RaisePen()  // Raise the pen
+  
+  // Task 3: Turn the pen to draw the next line (1 inch left)
+  TurnRight90Degrees()  // Pen now faces left
+  
+  IF PenIsLowered == False THEN
+      LowerPen()  // Lower the pen again
+  END IF
+  
+  MovePenLeft(1)  // Move pen 1 inch to the left and draw the line
+
+  RaisePen()  // Raise the pen
+  
+  // Task 4: Turn the pen to draw a 1-inch upward line
+  TurnRight90Degrees()  // Pen now faces upward
+  
+  IF PenIsLowered == False THEN
+      LowerPen()  // Lower the pen again
+  END IF
+  
+  MovePenUp(1)  // Move pen 1 inch upward and complete the square
+  
+  RaisePen()  // Raise the pen
+  
+  // Task 5: Draw a circle
+  TurnRight90Degrees()  // Pen faces right
+  
+  IF PenIsLowered == False THEN
+      LowerPen()  // Lower the pen
+  END IF
+  
+  DrawCircle(1)  // Draw a 1-inch diameter circle clockwise
+
+  RaisePen()  // Raise the pen from the paper
+
+END
